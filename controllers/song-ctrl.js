@@ -116,7 +116,7 @@ getSongs = async (req, res) => {
         .status(404)
         .json({ success: false, error: `Song not found` })
     }
-    return res.status(200).json({ success: true, data: songs })
+    return res.status(200).json({ success: true, songs: songs })
   }).catch(err => console.log(err))
 }
 
